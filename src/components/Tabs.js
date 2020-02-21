@@ -1,7 +1,7 @@
 import React from 'react'
 import { Component } from 'react'
 import TabHeaders from './TabHeaders';
-import Widgets from './Widgets';
+import './Tabs.css';
 
 class Tabs extends Component {
     constructor(props) {
@@ -21,9 +21,9 @@ class Tabs extends Component {
         const currentTab = this.props.tabs[this.state.selectedTab];
 
         return (
-            <div className="tabs">
+            <div className="tabs-component">
                 <h1>Tabs</h1>
-                <div className="tabs-list">
+                <div className="tabs">
                     <TabHeaders
                         selectedTab={this.state.selectedTab}
                         onTabChosen={this.selectTab}
@@ -41,39 +41,3 @@ class Tabs extends Component {
 }
 
 export default Tabs;
-
-// export default class Tabs extends React.Component {
-//     constructor(props) {
-//       super(props);
-//       this.state = {
-//         selectedPane: 0
-//       };
-//       this.selectTab = this.selectTab.bind(this);
-//     }
-  
-//     selectTab(num) {
-//       this.setState({selectedPane: num});
-//     }
-  
-//     render() {
-//       const pane = this.props.panes[this.state.selectedPane];
-  
-//       return (
-//         <div>
-//           <h1>Tabs</h1>
-//           <div className='tabs'>
-//             <Headers
-//               selectedPane={this.state.selectedPane}
-//               onTabChosen={this.selectTab}
-//               panes={this.props.panes}>
-//             </Headers>
-//             <div className='tab-content'>
-//               <article>
-//                 {pane.content}
-//               </article>
-//             </div>
-//           </div>
-//         </div>
-//       );
-//     }
-//   }
