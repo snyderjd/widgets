@@ -3,6 +3,7 @@ import { Component } from 'react';
 import './Widgets.css';
 import Clock from './Clock';
 import Tabs from './Tabs';
+import Weather from './Weather';
 
 class Widgets extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class Widgets extends Component {
       <div className="Widgets">
         <Clock />
         <Tabs tabs={this.state.tabs} />
+        <Weather />
       </div>
     );
   }
