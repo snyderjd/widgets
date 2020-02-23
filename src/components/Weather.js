@@ -1,5 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
+import './Weather.css'
 
 import DataManager from '../DataManager';
 

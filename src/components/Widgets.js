@@ -4,6 +4,7 @@ import './Widgets.css';
 import Clock from './Clock';
 import Tabs from './Tabs';
 import Weather from './Weather';
+import Autocomplete from './Autocomplete';
 
 class Widgets extends Component {
   constructor(props) {
@@ -21,9 +22,13 @@ class Widgets extends Component {
           title: "Tab 3",
           content: "In the render method of Tabs, render a collection of h1s (with titles) in a ul and the content of the selected tab in an article"
         }
+      ],
+      names: [
+        "Abba", "Barney", "Barbara", "Jeff", "Jenny", "Sarah", "Sally", "Anna", "Jeremy", "Bart"
       ]
     }
   }
+
 
   render() {
     return (
@@ -31,6 +36,7 @@ class Widgets extends Component {
         <Clock />
         <Tabs tabs={this.state.tabs} />
         <Weather />
+        <Autocomplete names={this.state.names} />
       </div>
     );
   }
